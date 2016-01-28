@@ -1,9 +1,9 @@
-var requester = require('request');
+
+var Requester = require('requester'),
+requester = new Requester({debug: 1});
 
 module.exports = function expedia_api (){
- requester("", function (err, data) {
-        if (err) console.log(err);
-        console.log (data.body);
-    });
+	requester.get("http://terminal2.expedia.com:80/x/mflights/search?departureDate=2016-02-18&departureAirport=SEA&arrivalAirport=ABR&prettyPrint=true&apikey=TkefBxxLZbMGgOvKRGFLIkYJxcB3bYtA", function (body) {
+    console.log (this.statusCode, body);
+ 	});
 };
-//http://api.eventful.com/json/events/search?c=music&l=Seattle&app_key=C5VJScp667pVNMHB&keywords=childish+gambino"
