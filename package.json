@@ -12,7 +12,9 @@
   "author": "Iryna Bondarenko",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.13.4",
-    "requester": "^0.1.22"
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "request": "^2.69.0"
   }
 }
